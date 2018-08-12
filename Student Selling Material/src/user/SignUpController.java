@@ -6,8 +6,30 @@ import com.jfoenix.controls.JFXTextField;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.layout.Pane;
 
 public class SignUpController {
+
+    @FXML
+    private Pane resetPassword;
+
+    @FXML
+    private JFXTextField studentNumberRen;
+
+    @FXML
+    private JFXPasswordField passReno;
+
+    @FXML
+    private JFXButton cancel1;
+
+    @FXML
+    private JFXTextField emailRen;
+
+    @FXML
+    private JFXPasswordField reEnterPassRen;
+
+    @FXML
+    private Pane signUpPane;
 
     @FXML
     private JFXTextField studentNumber;
@@ -28,12 +50,25 @@ public class SignUpController {
     private JFXButton login;
 
     @FXML
+    private JFXTextField email;
+
+    @FXML
     void onCancel(ActionEvent event) {
 
     }
 
     @FXML
+    void onCancelReset(ActionEvent event) {
+
+    }
+
+    @FXML
     void onLogin(ActionEvent event) {
+
+    }
+
+    @FXML
+    void onReset(ActionEvent event) {
 
     }
 
