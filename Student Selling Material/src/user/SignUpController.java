@@ -11,24 +11,6 @@ import javafx.scene.layout.Pane;
 public class SignUpController {
 
     @FXML
-    private Pane resetPassword;
-
-    @FXML
-    private JFXTextField studentNumberRen;
-
-    @FXML
-    private JFXPasswordField passReno;
-
-    @FXML
-    private JFXButton cancel1;
-
-    @FXML
-    private JFXTextField emailRen;
-
-    @FXML
-    private JFXPasswordField reEnterPassRen;
-
-    @FXML
     private Pane signUpPane;
 
     @FXML
@@ -51,6 +33,21 @@ public class SignUpController {
 
     @FXML
     private JFXTextField email;
+
+    @FXML
+    private Pane resetPassword;
+
+    @FXML
+    private JFXTextField studentNumberRen;
+
+    @FXML
+    private JFXPasswordField passReno;
+
+    @FXML
+    private JFXTextField emailRen;
+
+    @FXML
+    private JFXPasswordField reEnterPassRen;
 
     @FXML
     void onCancel(ActionEvent event) {

@@ -12,60 +12,6 @@
 
 <AnchorPane prefHeight="565.0" prefWidth="395.0" style="-fx-background-color: #2C3E50;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user.SignUpController">
    <children>
-      <Pane fx:id="resetPassword" prefHeight="565.0" prefWidth="395.0" style="-fx-background-color: #2C3E50;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <Label layoutX="86.0" layoutY="22.0" prefHeight="44.0" prefWidth="213.0" text="Reset password" textAlignment="CENTER" textFill="WHITE">
-               <font>
-                  <Font name="Arial Black" size="20.0" />
-               </font>
-               <graphic>
-                  <FontAwesomeIconView glyphName="USER_PLUS" size="20" style="-fx-fill: #ffffff;" />
-               </graphic>
-            </Label>
-            <JFXTextField fx:id="studentNumberRen" focusColor="WHITE" labelFloat="true" layoutX="38.0" layoutY="87.0" maxWidth="284.0" minWidth="226.0" prefHeight="31.0" prefWidth="284.0" promptText="Student number/ Username" unFocusColor="WHITE">
-               <font>
-                  <Font size="15.0" />
-               </font>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </JFXTextField>
-            <JFXPasswordField fx:id="passReno" focusColor="WHITE" labelFloat="true" layoutX="38.0" layoutY="235.0" maxWidth="284.0" minWidth="216.0" prefHeight="31.0" prefWidth="284.0" promptText="Password" unFocusColor="WHITE">
-               <font>
-                  <Font size="15.0" />
-               </font>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </JFXPasswordField>
-            <JFXButton fx:id="cancel1" buttonType="RAISED" layoutX="56.0" layoutY="415.0" onAction="#onCancelReset" prefHeight="41.0" prefWidth="86.0" style="-fx-background-color: #E74C3C;" text="Cancel" textFill="WHITE">
-               <font>
-                  <Font name="Arial Black" size="12.0" />
-               </font>
-            </JFXButton>
-            <JFXButton buttonType="RAISED" layoutX="212.0" layoutY="415.0" onAction="#onReset" prefHeight="41.0" prefWidth="86.0" style="-fx-background-color: #2ECC71;" text="Create" textFill="WHITE">
-               <font>
-                  <Font name="Arial Black" size="12.0" />
-               </font>
-            </JFXButton>
-            <JFXTextField fx:id="emailRen" focusColor="WHITE" labelFloat="true" layoutX="38.0" layoutY="157.0" maxWidth="284.0" minWidth="226.0" prefHeight="31.0" prefWidth="284.0" promptText="email" unFocusColor="WHITE">
-               <font>
-                  <Font size="15.0" />
-               </font>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </JFXTextField>
-            <JFXPasswordField fx:id="reEnterPassRen" focusColor="WHITE" labelFloat="true" layoutX="38.0" layoutY="314.0" maxWidth="284.0" minWidth="216.0" prefHeight="31.0" prefWidth="284.0" promptText="Re enter Password" unFocusColor="WHITE">
-               <font>
-                  <Font size="15.0" />
-               </font>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </JFXPasswordField>
-         </children>
-      </Pane>
       <Pane fx:id="signUpPane" prefHeight="565.0" prefWidth="395.0" style="-fx-background-color: #2C3E50;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Label layoutX="125.0" layoutY="19.0" prefHeight="44.0" prefWidth="142.0" text="Sign up" textAlignment="CENTER" textFill="WHITE">
@@ -126,6 +72,60 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
             </JFXTextField>
+         </children>
+      </Pane>
+      <Pane fx:id="resetPassword" prefHeight="565.0" prefWidth="395.0" style="-fx-background-color: #2C3E50;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="86.0" layoutY="22.0" prefHeight="44.0" prefWidth="213.0" text="Reset password" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView glyphName="USER_PLUS" size="20" style="-fx-fill: #ffffff;" />
+               </graphic>
+            </Label>
+            <JFXTextField fx:id="studentNumberRen" focusColor="WHITE" labelFloat="true" layoutX="38.0" layoutY="87.0" maxWidth="284.0" minWidth="226.0" prefHeight="31.0" prefWidth="284.0" promptText="Student number/ Username" unFocusColor="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </JFXTextField>
+            <JFXPasswordField fx:id="passReno" focusColor="WHITE" labelFloat="true" layoutX="38.0" layoutY="235.0" maxWidth="284.0" minWidth="216.0" prefHeight="31.0" prefWidth="284.0" promptText="Password" unFocusColor="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </JFXPasswordField>
+            <JFXButton buttonType="RAISED" layoutX="56.0" layoutY="415.0" onAction="#onCancelReset" prefHeight="41.0" prefWidth="86.0" style="-fx-background-color: #E74C3C;" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="212.0" layoutY="415.0" onAction="#onReset" prefHeight="41.0" prefWidth="86.0" style="-fx-background-color: #2ECC71;" text="Create" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="emailRen" focusColor="WHITE" labelFloat="true" layoutX="38.0" layoutY="157.0" maxWidth="284.0" minWidth="226.0" prefHeight="31.0" prefWidth="284.0" promptText="email" unFocusColor="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </JFXTextField>
+            <JFXPasswordField fx:id="reEnterPassRen" focusColor="WHITE" labelFloat="true" layoutX="38.0" layoutY="314.0" maxWidth="284.0" minWidth="216.0" prefHeight="31.0" prefWidth="284.0" promptText="Re enter Password" unFocusColor="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </JFXPasswordField>
          </children>
       </Pane>
    </children>
