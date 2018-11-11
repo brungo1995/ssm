@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="641.0" prefWidth="1229.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="student.account.MainPageController">
+   <children>
+      <Pane fx:id="cartPane" layoutX="181.0" layoutY="23.0" prefHeight="615.0" prefWidth="784.0" style="-fx-background-color: #CACFD2;" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="183.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="24.0">
+         <children>
+            <TableView fx:id="cartTable" layoutX="258.0" layoutY="99.0" onMouseClicked="#onTableClicked" prefHeight="268.0" prefWidth="622.0">
+              <columns>
+                <TableColumn fx:id="productColumn" prefWidth="302.0" text="Product" />
+                <TableColumn fx:id="unitPriceColumn" prefWidth="153.0" text="Unit Price" />
+                  <TableColumn fx:id="AvailableColumn" prefWidth="166.0" text="Available" />
+              </columns>
+            </TableView>
+            <JFXButton buttonType="RAISED" layoutX="258.0" layoutY="451.0" onAction="#onDelete" prefHeight="41.0" prefWidth="86.0" style="-fx-background-color: #E74C3C;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="787.0" layoutY="442.0" onAction="#onClose" prefHeight="41.0" prefWidth="86.0" style="-fx-background-color: #2ECC71;" text="Close" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="540.0" layoutY="25.0" prefHeight="31.0" prefWidth="59.0" text="Cart">
+               <font>
+                  <Font name="Arial Black" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="257.0" layoutY="367.0" prefHeight="41.0" prefWidth="216.0" text="* Double Click a row to delete">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+         </children>
+      </Pane>
+      <VBox layoutX="14.0" layoutY="24.0" prefHeight="615.0" prefWidth="183.0" style="-fx-background-color: #1C2833;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="24.0">
+         <children>
+            <Pane prefHeight="616.0" prefWidth="183.0" style="-fx-background-color: #1C2833;">
+               <children>
+                  <JFXButton layoutY="126.0" onAction="#onProfile" prefHeight="68.0" prefWidth="183.0" text="Profile" textFill="#fffdfd">
+                     <font>
+                        <Font name="Arial Black" size="18.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView glyphName="ACCOUNT" size="25" style="-fx-fill: #fffdfd;" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutY="274.0" onAction="#onMyAds" prefHeight="68.0" prefWidth="183.0" text="My Ads" textFill="#fffdfd">
+                     <font>
+                        <Font name="Arial Black" size="18.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView glyphName="TABLE_LARGE" size="20" style="-fx-fill: #fffdfd;" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="2.0" layoutY="348.0" onAction="#onLogOut" prefHeight="68.0" prefWidth="183.0" text="Log Out" textFill="#fffdfd">
+                     <font>
+                        <Font name="Arial Black" size="18.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="LOGIN" size="23" />
+                     </graphic>
+                  </JFXButton>
+                  <Label layoutX="2.0" layoutY="2.0" prefHeight="78.0" prefWidth="183.0" text=" SSM" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Lucida Calligraphy Italic" size="55.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </opaqueInsets>
+                  </Label>
+                  <JFXButton layoutY="206.0" onAction="#onMessage" prefHeight="68.0" prefWidth="183.0" text="Message" textFill="#fffdfd">
+                     <font>
+                        <Font name="Arial Black" size="18.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView glyphName="MESSAGE_TEXT" size="23" style="-fx-fill: #fffdfd;" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <MenuBar layoutX="183.0" layoutY="2.0" prefHeight="25.0" prefWidth="683.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" onAction="#onHelp" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane fx:id="mainPane" layoutX="183.0" layoutY="26.0" prefHeight="615.0" prefWidth="784.0" style="-fx-background-color: #E5E7E9;" AnchorPane.leftAnchor="183.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Pane fx:id="aboutPane" layoutX="20.0" layoutY="13.0" prefHeight="525.0" prefWidth="1022.0" style="-fx-background-color: #E5E7E9;" AnchorPane.bottomAnchor="77.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="13.0">
+               <children>
+                  <Label layoutX="421.0" layoutY="17.0" prefHeight="48.0" prefWidth="168.0" text="Need Help ">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </Label>
+                  <JFXTextArea editable="false" layoutX="238.0" layoutY="139.0" prefHeight="214.0" text="Hey there !&#10;Thanks for using our application&#10;If you are having any problem please send an&#10;&#10;e-mail to the developer on : studentsellingmaterial@gmail.com">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextArea>
+                  <FontAwesomeIconView glyphName="QUESTION" layoutX="581.0" layoutY="51.0" size="30" wrappingWidth="21.99997901916504" />
+                  <JFXButton layoutX="663.0" layoutY="422.0" onAction="#onBack" prefHeight="41.0" prefWidth="86.0" style="-fx-background-color: #1C2833;" text="Got it" textFill="#fffdfd">
+                     <font>
+                        <Font name="Arial Black" size="18.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Pane fx:id="topBarPane" layoutX="22.0" layoutY="14.0" prefHeight="78.0" prefWidth="753.0" style="-fx-background-color: #D0D3D4;" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="9.0">
+               <children>
+                  <JFXTextField fx:id="searchBar" labelFloat="true" layoutX="114.0" layoutY="24.0" maxWidth="423.0" minWidth="318.0" prefHeight="52.0" prefWidth="423.0" promptText="Search" unFocusColor="BLACK">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </JFXTextField>
+                  <JFXButton layoutX="545.0" layoutY="37.0" onAction="#onSearch" prefHeight="25.0" prefWidth="31.0" text=" ">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="SEARCH" size="17" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton layoutX="865.0" layoutY="35.0" onAction="#onCart" prefHeight="31.0" prefWidth="79.0" text=" " textFill="#e74c3c">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="SHOPPING_BASKET" size="20" wrappingWidth="30.85714340209961" />
+                     </graphic>
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton layoutX="721.0" layoutY="37.0" onAction="#onRefresh" text=" ">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="REFRESH" size="20" />
+                     </graphic>
+                  </JFXButton>
+                  <Label fx:id="basketLabel" layoutX="908.0" layoutY="29.0" prefHeight="22.0" prefWidth="22.0" text=" " textFill="#e74c3c">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="paginationPane" layoutX="22.0" layoutY="553.0" prefHeight="48.0" prefWidth="753.0" style="-fx-background-color: #D0D3D4;" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="9.0" />
+            <ScrollPane fx:id="adsScrollPane" fitToHeight="true" fitToWidth="true" layoutX="118.0" layoutY="98.0" prefHeight="441.0" prefWidth="752.0" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="118.0" AnchorPane.rightAnchor="176.0" AnchorPane.topAnchor="98.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

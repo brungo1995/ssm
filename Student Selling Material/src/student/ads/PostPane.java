@@ -1,4 +1,4 @@
-package ads;
+package student.ads;
 
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
